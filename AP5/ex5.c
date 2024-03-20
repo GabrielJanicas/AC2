@@ -23,15 +23,23 @@ void delay(unsigned int ms){
 	while(readCoreTimer() < 20000 * ms);
 }
 
-int main (void)
+int main(void)
 {
-	TRISB = TRISB & 0x80FF;
-	TRISD = TRISD & 0xFF9F;
-
-	while(1)
-	{
-		send2displays(0x15);
-		delay(200);
-	}
-	return 0;
+// declare variables
+// initialize ports
+TRISB = TRISB & 0x80FF;
+TRISD = TRISD & 0xFF9F;
+counter = 0;
+while(1){
+i = 0;
+}
+do{
+	send2displays(counter);
+	delay(20);// wait 20 ms (1/50Hz)
+} 
+while(++i < );{
+	counter++;
+}
+// increment counter (mod 256)
+return 0;
 }

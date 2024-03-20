@@ -31,7 +31,7 @@ int main (void)
 	while(1)
 	{
 		send2displays(0x15);
-		delay(200);
+		delay(10);
 	}
 	return 0;
 }
