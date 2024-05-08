@@ -1,4 +1,4 @@
-#include  <detpic32.h>
+#include <detpic32.h>
 
 int main(void)
 {
@@ -35,7 +35,8 @@ int main(void)
 void _int_(27) isr_adc(void)
 {
 	putChar('\r');
+	volatile int adc_value;
 	printInt(ADC1BUF0, 16 | 3 << 16);
 	IFS1bits.AD1IF = 0; // Reset AD1IF
 	AD1CON1bits.ASAM = 1; // Start conversion
-}
+}.
